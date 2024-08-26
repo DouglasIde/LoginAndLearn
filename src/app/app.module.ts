@@ -9,8 +9,6 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        HeaderComponent
     ],
     imports: [
         BrowserModule,
@@ -18,9 +16,10 @@ import { CommonModule } from '@angular/common';
         FormsModule,
         HttpClientModule,
         ReactiveFormsModule,
-        CommonModule
+        CommonModule,
+        AppComponent
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: []
 })
 export class AppModule { }
