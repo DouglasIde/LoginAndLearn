@@ -7,10 +7,10 @@ import { Router } from '@angular/router'
   styleUrl: './header.component.scss',
   standalone: true
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
 
 }
