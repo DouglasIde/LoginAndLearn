@@ -3,76 +3,17 @@
   <div class="col-md-9 mx-auto"></div>
   <app-stepper  [linearModeSelected]="false" #appStepper>
     <cdk-step [label]="'Informações Pessoais'">
-      Step 1
+      <app-info-pessoal></app-info-pessoal>
     </cdk-step>
     <cdk-step [label]="'Endereço'">
       Step 2
+      <app-endereco></app-endereco>
     </cdk-step>
     <cdk-step [label]="'Segurança'">
       Step 3
+      <app-conta></app-conta>
     </cdk-step>
   </app-stepper>
-  <app-info-pessoal></app-info-pessoal>
-</div>
-
-<label for="exampleInputEmail1" class="form-label">Email</label>
-<input
-  type="email"
-  class="form-control"
-  id="exampleInputEmail1"
-  aria-describedby="emailHelp"
-  placeholder="exemplo@dominio.com"
-/>
-
-<div class="mb-3">
-  <label for="exampleInputPassword1" class="form-label">Senha</label>
-  <input
-    type="password"
-    class="form-control"
-    id="exampleInputPassword1"
-    placeholder="*Digite a sua Senha"
-  />
-</div>
-
-<div class="mb-3">
-  <label for="exampleInputPassword1" class="form-label"
-    >Confirmar sua Senha</label
-  >
-  <input
-    type="password"
-    class="form-control"
-    id="exampleInputPassword1"
-    placeholder="*Confirme sua senha"
-  />
-</div>
-
-<div>
-  <label for="cpf" class="form-label">País</label>
-  <input type="text" class="form-control" placeholder="*País" />
-</div>
-
-<div>
-  <label for="cpf" class="form-label">CEP</label>
-  <input type="text" class="form-control" placeholder="*CEP" />
-</div>
-
-<div>
-  <label for="cpf" class="form-label">Cidade</label>
-  <input type="text" class="form-control" placeholder="*Cidade" />
-</div>
-
-<div>
-  <label for="cpf" class="form-label">Rua</label>
-  <input type="text" class="form-control" placeholder="Longradouro" />
-</div>
-
-<div>
-  <label for="cpf" class="form-label">Número de Residência</label>
-  <input type="text" class="form-control" placeholder="*Número de residência" />
-</div>
-
-<div>
-  <input type="text" class="form-control" placeholder="*Complemento" />
 </div>
 
 <div class="mb-3 form-check">
