@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, NgModule, QueryList, TemplateRef, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, Input, NgModule, QueryList, TemplateRef, ViewChildren } from '@angular/core';
 import { CdkStep, CdkStepper, CdkStepperModule } from '@angular/cdk/stepper';
 
 @Component({
@@ -10,10 +10,10 @@ import { CdkStep, CdkStepper, CdkStepperModule } from '@angular/cdk/stepper';
   styleUrl: './stepper.component.scss',
   providers: [{provide: CdkStepper, useExisting: StepperComponent}]
 })
-export class StepperComponent extends CdkStepper {
+export class StepperComponent extends CdkStepper{
   @Input() linearModeSelected = true;
 
-  // @ViewChildren(CdkStep) steps!: QueryList<CdkStep>;
+  // @ViewChildren(CdkStep) declare steps: QueryList<CdkStep>;
 
   onClick(index: number){
     this.selectedIndex = index;
@@ -23,8 +23,9 @@ export class StepperComponent extends CdkStepper {
     return this.steps.toArray();
   }
 
-  getStepContent(index: number): TemplateRef<any> | null{
-    const step = this.stepsItems[index];
+  getStepContent(index: number): TemplateRef<any> | null {
+    const step = this.steps.toArray()[index];
+    console.log('Step Content:', step ? step.content : null);
     return step ? step.content : null;
   }
 }

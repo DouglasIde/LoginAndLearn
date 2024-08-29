@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app.routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { MatStepperModule } from '@angular/material/stepper';
+import { CdkStepperModule } from '@angular/cdk/stepper';
 
 @NgModule({
     declarations: [
@@ -17,7 +19,9 @@ import { CommonModule } from '@angular/common';
         HttpClientModule,
         ReactiveFormsModule,
         CommonModule,
-        AppComponent
+        AppComponent,
+        MatStepperModule,
+        CdkStepperModule
     ],
     providers: [],
     bootstrap: []

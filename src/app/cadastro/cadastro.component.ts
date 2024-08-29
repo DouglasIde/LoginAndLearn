@@ -13,5 +13,5 @@ import { ContaComponent } from "./conta/conta.component";
   styleUrl: './cadastro.component.scss'
 })
 export class CadastroComponent {
-
+  title = 'stepper';
 }
